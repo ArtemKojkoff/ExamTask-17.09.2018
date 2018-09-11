@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_examtask-17.09.2018" default="compile.module.examtask-17.09.2018">
+  <dirname property="module.examtask-17.09.2018.basedir" file="${ant.file.module_examtask-17.09.2018}"/>
+  
+  <property name="module.jdk.home.examtask-17.09.2018" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.examtask-17.09.2018" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.examtask-17.09.2018" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.examtask-17.09.2018" value="-encoding UTF-8 -source 5 -target 1.5 ${compiler.args}"/>
+  
+  <property name="examtask-17.09.2018.output.dir" value="${module.examtask-17.09.2018.basedir}/target/classes"/>
+  <property name="examtask-17.09.2018.testoutput.dir" value="${module.examtask-17.09.2018.basedir}/target/test-classes"/>
+  
+  <path id="examtask-17.09.2018.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="examtask-17.09.2018.module.production.classpath">
+    <path refid="${module.jdk.classpath.examtask-17.09.2018}"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-java:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-api:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-chrome-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-edge-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-firefox-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-ie-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-opera-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-remote-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-safari-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-support:3.13.0.classpath"/>
+    <path refid="library.maven:_net.bytebuddy:byte-buddy:1.8.3.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-exec:1.3.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.4.classpath"/>
+    <path refid="library.maven:_com.google.guava:guava:25.0-jre.classpath"/>
+    <path refid="library.maven:_com.google.code.findbugs:jsr305:1.3.9.classpath"/>
+    <path refid="library.maven:_org.checkerframework:checker-compat-qual:2.0.0.classpath"/>
+    <path refid="library.maven:_com.google.errorprone:error_prone_annotations:2.1.3.classpath"/>
+    <path refid="library.maven:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.mojo:animal-sniffer-annotations:1.14.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.maven:_com.squareup.okhttp3:okhttp:3.10.0.classpath"/>
+    <path refid="library.maven:_com.squareup.okio:okio:1.14.1.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.8.classpath"/>
+  </path>
+  
+  <path id="examtask-17.09.2018.runtime.production.module.classpath">
+    <pathelement location="${examtask-17.09.2018.output.dir}"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-java:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-api:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-chrome-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-edge-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-firefox-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-ie-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-opera-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-remote-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-safari-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-support:3.13.0.classpath"/>
+    <path refid="library.maven:_net.bytebuddy:byte-buddy:1.8.3.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-exec:1.3.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.4.classpath"/>
+    <path refid="library.maven:_com.google.guava:guava:25.0-jre.classpath"/>
+    <path refid="library.maven:_com.google.code.findbugs:jsr305:1.3.9.classpath"/>
+    <path refid="library.maven:_org.checkerframework:checker-compat-qual:2.0.0.classpath"/>
+    <path refid="library.maven:_com.google.errorprone:error_prone_annotations:2.1.3.classpath"/>
+    <path refid="library.maven:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.mojo:animal-sniffer-annotations:1.14.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.maven:_com.squareup.okhttp3:okhttp:3.10.0.classpath"/>
+    <path refid="library.maven:_com.squareup.okio:okio:1.14.1.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.8.classpath"/>
+  </path>
+  
+  <path id="examtask-17.09.2018.module.classpath">
+    <path refid="${module.jdk.classpath.examtask-17.09.2018}"/>
+    <pathelement location="${examtask-17.09.2018.output.dir}"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-java:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-api:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-chrome-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-edge-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-firefox-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-ie-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-opera-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-remote-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-safari-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-support:3.13.0.classpath"/>
+    <path refid="library.maven:_net.bytebuddy:byte-buddy:1.8.3.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-exec:1.3.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.4.classpath"/>
+    <path refid="library.maven:_com.google.guava:guava:25.0-jre.classpath"/>
+    <path refid="library.maven:_com.google.code.findbugs:jsr305:1.3.9.classpath"/>
+    <path refid="library.maven:_org.checkerframework:checker-compat-qual:2.0.0.classpath"/>
+    <path refid="library.maven:_com.google.errorprone:error_prone_annotations:2.1.3.classpath"/>
+    <path refid="library.maven:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.mojo:animal-sniffer-annotations:1.14.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.maven:_com.squareup.okhttp3:okhttp:3.10.0.classpath"/>
+    <path refid="library.maven:_com.squareup.okio:okio:1.14.1.classpath"/>
+    <path refid="library.maven:_org.testng:testng:6.14.3.classpath"/>
+    <path refid="library.maven:_com.beust:jcommander:1.72.classpath"/>
+    <path refid="library.maven:_org.apache-extras.beanshell:bsh:2.0b6.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.8.classpath"/>
+  </path>
+  
+  <path id="examtask-17.09.2018.runtime.module.classpath">
+    <pathelement location="${examtask-17.09.2018.testoutput.dir}"/>
+    <pathelement location="${examtask-17.09.2018.output.dir}"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-java:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-api:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-chrome-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-edge-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-firefox-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-ie-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-opera-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-remote-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-safari-driver:3.13.0.classpath"/>
+    <path refid="library.maven:_org.seleniumhq.selenium:selenium-support:3.13.0.classpath"/>
+    <path refid="library.maven:_net.bytebuddy:byte-buddy:1.8.3.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-exec:1.3.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.8.4.classpath"/>
+    <path refid="library.maven:_com.google.guava:guava:25.0-jre.classpath"/>
+    <path refid="library.maven:_com.google.code.findbugs:jsr305:1.3.9.classpath"/>
+    <path refid="library.maven:_org.checkerframework:checker-compat-qual:2.0.0.classpath"/>
+    <path refid="library.maven:_com.google.errorprone:error_prone_annotations:2.1.3.classpath"/>
+    <path refid="library.maven:_com.google.j2objc:j2objc-annotations:1.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.mojo:animal-sniffer-annotations:1.14.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.maven:_com.squareup.okhttp3:okhttp:3.10.0.classpath"/>
+    <path refid="library.maven:_com.squareup.okio:okio:1.14.1.classpath"/>
+    <path refid="library.maven:_org.testng:testng:6.14.3.classpath"/>
+    <path refid="library.maven:_com.beust:jcommander:1.72.classpath"/>
+    <path refid="library.maven:_org.apache-extras.beanshell:bsh:2.0b6.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.8.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.examtask-17.09.2018">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.examtask-17.09.2018">
+    <patternset refid="excluded.from.module.examtask-17.09.2018"/>
+  </patternset>
+  
+  <path id="examtask-17.09.2018.module.sourcepath">
+    <dirset dir="${module.examtask-17.09.2018.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="examtask-17.09.2018.module.test.sourcepath">
+    <dirset dir="${module.examtask-17.09.2018.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.examtask-17.09.2018" depends="compile.module.examtask-17.09.2018.production,compile.module.examtask-17.09.2018.tests" description="Compile module ExamTask-17.09.2018"/>
+  
+  <target name="compile.module.examtask-17.09.2018.production" depends="register.custom.compilers" description="Compile module ExamTask-17.09.2018; production classes">
+    <mkdir dir="${examtask-17.09.2018.output.dir}"/>
+    <javac2 destdir="${examtask-17.09.2018.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.examtask-17.09.2018}/javac">
+      <compilerarg line="${compiler.args.examtask-17.09.2018}"/>
+      <bootclasspath refid="examtask-17.09.2018.module.bootclasspath"/>
+      <classpath refid="examtask-17.09.2018.module.production.classpath"/>
+      <src refid="examtask-17.09.2018.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.examtask-17.09.2018"/>
+    </javac2>
+    
+    <copy todir="${examtask-17.09.2018.output.dir}">
+      <fileset dir="${module.examtask-17.09.2018.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.examtask-17.09.2018.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.examtask-17.09.2018.tests" depends="register.custom.compilers,compile.module.examtask-17.09.2018.production" description="compile module ExamTask-17.09.2018; test classes" unless="skip.tests">
+    <mkdir dir="${examtask-17.09.2018.testoutput.dir}"/>
+    <javac2 destdir="${examtask-17.09.2018.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.examtask-17.09.2018}/javac">
+      <compilerarg line="${compiler.args.examtask-17.09.2018}"/>
+      <bootclasspath refid="examtask-17.09.2018.module.bootclasspath"/>
+      <classpath refid="examtask-17.09.2018.module.classpath"/>
+      <src refid="examtask-17.09.2018.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.examtask-17.09.2018"/>
+    </javac2>
+    
+    <copy todir="${examtask-17.09.2018.testoutput.dir}">
+      <fileset dir="${module.examtask-17.09.2018.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.examtask-17.09.2018" description="cleanup module">
+    <delete dir="${examtask-17.09.2018.output.dir}"/>
+    <delete dir="${examtask-17.09.2018.testoutput.dir}"/>
+  </target>
+</project>
