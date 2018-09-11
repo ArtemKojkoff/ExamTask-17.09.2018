@@ -1,5 +1,4 @@
-package Page;
-
+package page;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,7 +26,7 @@ public class GooglePage extends BasePage {
     public GooglePage(WebDriver browser) {
         this.browser = browser;
         PageFactory.initElements(browser,this);
-      //  waitUntilElementIsVisible(alertBox, 10);
+        waitUntilElementIsVisible(queryField, 10);
     }
 
     public boolean isLoaded() {

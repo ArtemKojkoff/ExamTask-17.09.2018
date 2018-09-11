@@ -1,23 +1,20 @@
-package Page;
-
+package page;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class GoogleSearchPage extends BasePage {
 
 
-
-  @FindBy(xpath = "//div[@class='srg']/div[@class='g']")
+    @FindBy(xpath = "//div[@class='srg']/div[@class='g']")
    private List<WebElement> searchResults;
 
-  @FindBy(xpath = "//a[@aria-label='Page 2']")
+  @FindBy(xpath = "//a[@aria-label='page 2']")
   private WebElement buttonPage2;
 
 
@@ -41,9 +38,8 @@ public class GoogleSearchPage extends BasePage {
         return searchResaltsList;
     }
 
-    public NextGooglePage nextPage(){
+    public void nextPage(){
      buttonPage2.click();
-     return new NextGooglePage(browser);
     }
 
 

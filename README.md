@@ -12,3 +12,4 @@ and contain the methods which we use in test;
 
 We have file .gitignore. Files from this package will not be puch in Git.
 
+The Test runs in ExamTest

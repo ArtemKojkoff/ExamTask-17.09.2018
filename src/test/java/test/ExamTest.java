@@ -1,13 +1,7 @@
 package test;
 
-import Page.GooglePage;
-import Page.GoogleSearchPage;
-import Page.NextGooglePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import page.GoogleSearchPage;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -32,12 +26,12 @@ public class ExamTest extends BaseTast {
             Assert.assertTrue(searchResult.toLowerCase().contains(serchTerm.toLowerCase()),"searchTerm "+serchTerm+" not found in: \n"+searchResult);
         }
 
-        NextGooglePage nextGooglePage = googleSearchPage.nextPage();
+        googleSearchPage.nextPage();
 
-        Assert.assertTrue(nextGooglePage.isLoaded(),"GoogleSearchPage isn't loaded");
-        Assert.assertEquals(nextGooglePage.getSearchResultsList(),10,"is wrong");
+        Assert.assertTrue(googleSearchPage.isLoaded(),"GoogleSearchPage isn't loaded");
+        Assert.assertEquals(googleSearchPage.getSearchResultsList(),10,"is wrong");
 
-        List<String> searchResults2 = nextGooglePage.getSearchResultsList();
+        List<String> searchResults2 = googleSearchPage.getSearchResultsList();
 
         for (String searchResult: searchResults2) {
             Assert.assertTrue(searchResult.toLowerCase().contains(serchTerm.toLowerCase()),"searchTerm "+serchTerm+" not found in: \n"+searchResult);
